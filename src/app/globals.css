@@ -25,3 +25,78 @@ body {
     text-wrap: balance;
   }
 }
+
+/* styles/globals.css */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.wheel {
+  position: relative;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  border: 10px solid #ccc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 5s ease-out;
+}
+
+.wheel-section {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.section-1 {
+  transform: rotate(45deg);
+}
+
+.section-2 {
+  transform: rotate(90deg);
+}
+
+.section-3 {
+  transform: rotate(135deg);
+}
+
+.section-4 {
+  transform: rotate(180deg);
+}
+
+.section-5 {
+  transform: rotate(225deg);
+}
+
+.section-6 {
+  transform: rotate(270deg);
+}
+
+.section-7 {
+  transform: rotate(315deg);
+}
+
+.section-8 {
+  transform: rotate(360deg);
+}
+
+.spin-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: #fff;
+  cursor: pointer;
+}
