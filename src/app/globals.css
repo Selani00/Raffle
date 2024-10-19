@@ -26,69 +26,126 @@ body {
   }
 }
 
-/* styles/globals.css */
-.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+
+li:first-child .text{
+  background-color: violet;
 }
 
-.wheel {
+li:first-child {
+  transform: rotate(0deg) skewY(-45deg);
+}
+
+li:nth-child(2) .text{
+  background-color: indigo;
+}
+
+li:nth-child(2) {
+  transform: rotate(45deg) skewY(-45deg);
+}
+
+li:nth-child(3) .text{
+  background-color: blue;
+}
+
+li:nth-child(3) {
+  transform: rotate(90deg) skewY(-45deg);
+}
+
+li:nth-child(4) .text{
+  background-color: green;
+}
+
+li:nth-child(4) {
+  transform: rotate(135deg) skewY(-45deg);
+}
+
+li:nth-child(5) .text{
+  background-color: yellow;
+}
+
+li:nth-child(5) {
+  transform: rotate(180deg) skewY(-45deg);
+}
+
+li:nth-child(6) .text{
+  background-color: orange;
+}
+
+li:nth-child(6) {
+  transform: rotate(225deg) skewY(-45deg);
+}
+
+li:nth-child(7) .text{
+  background-color: red;
+}
+
+li:nth-child(7) {
+  transform: rotate(270deg) skewY(-45deg);
+}
+
+li:nth-child(8) .text{
+  background-color: pink;
+}
+
+li:nth-child(8) {
+  transform: rotate(315deg) skewY(-45deg);
+}
+
+
+
+.circle{
+  width: 25em;
+  height: 25em;
+  border: 1px solid black;
   position: relative;
-  width: 300px;
-  height: 300px;
+  padding: 0;
+  margin: 1em auto;
   border-radius: 50%;
-  border: 10px solid #ccc;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 5s ease-out;
+  list-style: none;
+  overflow: hidden;
+  transform: rotate(0deg); /* Initially set to 0 */
+  transition: transform 4s ease-out; /* Smooth spin effect */
 }
 
-.wheel-section {
+li {
+  overflow: hidden;
   position: absolute;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 24px;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0% 100%;
+}
+
+.text{
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  display:  block;
+  transform: skewY(45deg) rotate(22.5deg);
+  padding-top: 20px;
+  cursor: pointer;
   font-weight: bold;
+  font-size:18px;
 }
 
-.section-1 {
-  transform: rotate(45deg);
+.arrow {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 50px solid white;
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  z-index: 1;
+  transform: translateX(-50%);
 }
 
-.section-2 {
-  transform: rotate(90deg);
-}
 
-.section-3 {
-  transform: rotate(135deg);
-}
 
-.section-4 {
-  transform: rotate(180deg);
-}
-
-.section-5 {
-  transform: rotate(225deg);
-}
-
-.section-6 {
-  transform: rotate(270deg);
-}
-
-.section-7 {
-  transform: rotate(315deg);
-}
-
-.section-8 {
-  transform: rotate(360deg);
-}
 
 .spin-button {
   margin-top: 20px;
